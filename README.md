@@ -1,5 +1,7 @@
 # ui-action-designer
 
+> 🇰🇷 [한국어 README](./README.ko.md)
+
 **Figma to HTML pipeline: extract design systems, author PRDs, generate actions and tasks, output 4-direction design proposals.**
 
 ## Prerequisites
