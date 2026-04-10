@@ -2,6 +2,11 @@
 
 **Figma to HTML pipeline: extract design systems, author PRDs, generate actions and tasks, output 4-direction design proposals.**
 
+## Prerequisites
+
+- **Claude Cowork or Claude Code** environment
+- **Figma** access — recommended for design system extraction
+
 ## Goal
 
 ui-action-designer bridges the design-to-development disconnect through an 8-phase pipeline: extract design systems, enable PRD authoring, extract actions and tasks, apply SHE filter, inject platform patterns, generate 4-direction proposals, and validate PRD consistency.
