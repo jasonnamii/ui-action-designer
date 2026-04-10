@@ -1,15 +1,37 @@
-# UI Action Designer
+# ui-action-designer
 
-**Figma → DS → PRD → Action → Task → HTML pipeline.**
+**Figma to HTML pipeline: extract design systems, author PRDs, generate actions and tasks, output 4-direction design proposals.**
 
-Input → DS extraction → PRD integration → Action-Task decomposition → SHE filter → Knowledge injection (iOS/MD3) → 4-direction proposals → HTML output.
+## Goal
 
-### Example Prompts
+ui-action-designer bridges the design-to-development disconnect through an 8-phase pipeline: extract design systems, enable PRD authoring, extract actions and tasks, apply SHE filter, inject platform patterns, generate 4-direction proposals, and validate PRD consistency.
 
-```
-"Design a checkout flow from this Figma" → DS→Actions & Tasks→SHE→patterns→4 HTML proposals
-"Write a PRD for this feature" → factor selection→simple PRD
-```
+## When & How to Use
+
+Deploy when you have a Figma design or concept that needs to become actionable specification and code. Pipeline: Design → DS extraction → PRD linking → Action-Task extraction → SHE filter → Knowledge injection → 4-direction proposals → HTML output.
+
+## Use Cases
+
+| Scenario | Prompt | What Happens |
+|---|---|---|
+| Design handoff | `"Turn Figma design into PRD and 4 implementation directions"` | DS extraction→PRD→Actions/Tasks→SHE→4 proposals as HTML + consistency check |
+| PRD update | `"Update PRD based on new design direction"` | Design delta→PRD update→re-extract tasks→4-direction proposals→validate |
+| PRD from scratch | `"Author simple PRD for this component"` | Factor selection→PRD→DS extraction→4 proposals→HTML prototype |
+
+## Key Features
+
+- 8-phase pipeline: Input → DS extraction → Analysis → Action-Task → SHE → Knowledge → 4 proposals → HTML
+- PRD authoring with factor selection (required/optional/nice-to-have)
+- Action-Task hierarchy: Actions (functions) > Tasks (steps)
+- SHE filter: Simple→Hide→Embody
+- iOS/Material Design 3 pattern injection
+- 4-direction proposals: Pragmatic, Elegant, Minimal, Feature-rich
+- PRD consistency verification
+
+## Works With
+
+- **[human-skill](https://github.com/jasonnamii/human-skill)** — informs user behavior patterns for PRD design
+- **[hit-skill](https://github.com/jasonnamii/hit-skill)** — propagation and impact patterns for consumer features
 
 ## Installation
 
@@ -27,7 +49,7 @@ Skills placed in `~/.claude/skills/` are automatically available in Claude Code 
 
 ## Part of Cowork Skills
 
-This is one of 25 custom skills. See the full catalog: [https://github.com/jasonnamii/cowork-skills](https://github.com/jasonnamii/cowork-skills)
+This is one of 25+ custom skills. See the full catalog: [github.com/jasonnamii/cowork-skills](https://github.com/jasonnamii/cowork-skills)
 
 ## License
 
