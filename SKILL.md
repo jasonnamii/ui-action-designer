@@ -62,6 +62,8 @@ Action > Task (1:N). Action=전환율 단위, Task=퍼널 단계 단위. 전 단
 
 ## ③분석
 
+**경로별 로드 규칙:** A경로(PRD 있음) → prd-frames.md §파싱 섹션만. B경로(PRD 없음, 경량) → prd-frames.md §심플PRD 섹션만. C경로(역추론) → prd-frames.md §역추론 섹션만. 전체 파일 로드 금지 — 경로 판별 후 해당 섹션만 Read.
+
 | 경로 | 조건 | 실행 |
 |------|------|------|
 | **A. 파싱** | PRD 있음 | `prd-frames.md` §1→§2 유형식별→매핑룰 추출→형 확인 |
