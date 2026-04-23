@@ -1,6 +1,6 @@
 ---
 name: ui-action-designer
-description: "UI Action Designer. 피그마→DS추출→PRD연동(파싱/작성/역추론)→Action→Task→SHE필터→지식유입→4방향제안→HTML산출+PRD정합성검증. PRD 작성(팩터선택→심플PRD). Action(기능)>Task(단계). 일반/TURBO(지식유입·4방향제안·HTML블록 병렬 Agent) 2모드. P1: UI Action, UI설계, UI제안, 피그마, figma, SHE, 화면설계, Action, Task, UI패턴, PRD, PRD작성, 터보UI, UI 터보, TURBO. P2: 설계해줘, 제안해줘, 분석해줘, PRD 만들어줘, 터보로 제안해줘, design, propose, turbo UI. P3: UI design, design system, user flow, action-task, PRD frame, product requirements, turbo UI, parallel proposal. P5: HTML로, 제안서로, 비교표로, PRD로. NOT: 디자인시스템구축(→직접수행), 애플디자인스타일(→apple-design-style), 프로토타입코딩(→직접수행)."
+description: "v1.0 UI Action Designer. 피그마→DS추출→PRD연동(파싱/작성/역추론)→Action→Task→SHE필터→지식유입→4방향제안→HTML산출+PRD정합성검증. PRD 작성(팩터선택→심플PRD). Action(기능)>Task(단계). 일반/TURBO(지식유입·4방향제안·HTML블록 병렬 Agent) 2모드. P1: UI Action, UI설계, UI제안, 피그마, figma, SHE, 화면설계, Action, Task, UI패턴, PRD, PRD작성, 터보UI, UI 터보, TURBO. P2: 설계해줘, 제안해줘, 분석해줘, PRD 만들어줘, 터보로 제안해줘, design, propose, turbo UI. P3: UI design, design system, user flow, action-task, PRD frame, product requirements, turbo UI, parallel proposal. P5: HTML로, 제안서로, 비교표로, PRD로. NOT: 디자인시스템구축(→직접수행), 애플디자인스타일(→apple-design-style), 프로토타입코딩(→직접수행)."
 
 ---
 
@@ -21,6 +21,9 @@ description: "UI Action Designer. 피그마→DS추출→PRD연동(파싱/작성
 | 1 | 발동 조건 외 임의 실행 금지 |
 | 2 | 출력 형식 준수 — 내부 라벨 사용자 노출 금지 |
 | 3 | UP 존댓말·호칭 규칙 우선 적용 |
+
+### 입력 검증
+발동 전 필수 입력 확인. 불충분 시 1줄 질문으로 보완.
 
 ### 자체 점검 (self-check)
 SKILL.md ≤10KB · P1 ≥5개 · Gotchas 존재 확인 후 수정 완료.
@@ -214,15 +217,13 @@ HTML 파일. 화면별 4가지 제안 비교. **HTML 스타일은 html-div-style
 
 ## Gotchas
 
-- **PDF 토큰 과신**: 색상값 렌더링 의존 → 게이트 검증 필수
-- **SHE L1 과잉**: 발견성 급락 → 4축 판정 엄수
-- **범용 지식 혼입**: Task-특정 사례만
-- **Action/Task 혼용**: 용어 정의 참조
-- **PRD 없이 과잉 확신**: 역추론=추정 → 형 확인 필수
-- **PRD 팩터 과잉**: 선택 규칙 엄수, 12개 전부 나열 ✗
-- **PRD 유형 오판**: 보조 유형은 Task 순서·SHE 보충만. 매핑룰 적용 ✗
-- **UX_GATE 스킵**: SHE만 통과시키고 UX 원리 미검증 → N9(오류회복)·D3(피드백) 누락 빈발. ⑤-b 필수
-- **허브 풀로드**: 15원리 매 턴 전체 로드 → 토큰 낭비. 검증 실패 항목만 해당 섹션(#A-N5 등) 재참조
+| 함정 | 대응 |
+|---|---|
+| **PDF 토큰 과신**: 색상값 렌더링 의존 | 게이트 검증 필수 |
+| **SHE L1 과잉**: 발견성 급락 | 4축 판정 엄수 |
+| **범용 지식 혼입**: Task-특정 사례만 | 주의 |
+| **Action/Task 혼용**: 용어 정의 참조 | 주의 |
+| **PRD 없이 과잉 확신**: 역추론=추정 | 형 확인 필수 |
 
 
 ## 참조
