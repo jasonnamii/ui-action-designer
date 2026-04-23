@@ -1,12 +1,7 @@
 ---
 name: ui-action-designer
-description: |
-  UI Action Designer. 피그마→DS추출→PRD연동(파싱/작성/역추론)→Action→Task→SHE필터→지식유입→4방향제안→HTML산출+PRD정합성검증. PRD 작성(팩터선택→심플PRD). Action(기능)>Task(단계).
-  P1: UI Action, UI설계, UI제안, 피그마, figma, SHE, 화면설계, Action, Task, UI패턴, PRD, PRD작성.
-  P2: 설계해줘, 제안해줘, 분석해줘, PRD 만들어줘, design, propose.
-  P3: UI design, design system, user flow, action-task, PRD frame, product requirements.
-  P5: HTML로, 제안서로, 비교표로, PRD로.
-  NOT: 디자인시스템구축(→직접수행), 애플디자인스타일(→apple-design-style), 프로토타입코딩(→직접수행).
+description: "UI Action Designer. 피그마→DS추출→PRD연동(파싱/작성/역추론)→Action→Task→SHE필터→지식유입→4방향제안→HTML산출+PRD정합성검증. PRD 작성(팩터선택→심플PRD). Action(기능)>Task(단계). 일반/TURBO(지식유입·4방향제안·HTML블록 병렬 Agent) 2모드. P1: UI Action, UI설계, UI제안, 피그마, figma, SHE, 화면설계, Action, Task, UI패턴, PRD, PRD작성, 터보UI, UI 터보, TURBO. P2: 설계해줘, 제안해줘, 분석해줘, PRD 만들어줘, 터보로 제안해줘, design, propose, turbo UI. P3: UI design, design system, user flow, action-task, PRD frame, product requirements, turbo UI, parallel proposal. P5: HTML로, 제안서로, 비교표로, PRD로. NOT: 디자인시스템구축(→직접수행), 애플디자인스타일(→apple-design-style), 프로토타입코딩(→직접수행)."
+
 ---
 
 # UI Action Designer
@@ -14,6 +9,21 @@ description: |
 ①입력→②DS추출→[토큰게이트]→③분석(PRD 3경로)→④추출→⑤SHE→[SHE게이트]→⑤-b UX_GATE→⑥지식유입→⑦제안→⑧산출
 
 **UX 원리 허브:** `@ref: references/ux-principles.md` — Nielsen 10 + Norman 5 단일 출처. 이 스킬은 허브 §A+§B 전체 적용.
+
+---
+
+---
+
+## ⛔ 절대 규칙
+
+| # | 규칙 |
+|---|------|
+| 1 | 발동 조건 외 임의 실행 금지 |
+| 2 | 출력 형식 준수 — 내부 라벨 사용자 노출 금지 |
+| 3 | UP 존댓말·호칭 규칙 우선 적용 |
+
+### 자체 점검 (self-check)
+SKILL.md ≤10KB · P1 ≥5개 · Gotchas 존재 확인 후 수정 완료.
 
 ---
 
@@ -161,6 +171,47 @@ HTML 파일. 화면별 4가지 제안 비교. **HTML 스타일은 html-div-style
 
 ---
 
+## TURBO 모드 — 고품질 병렬 가속화
+
+**목적:** UI 제안서 산출 시간 단축. DS 토큰·SHE 필터·UX_GATE(Nielsen 10 + Norman 5)·PRD 정합성 검증 불변, 지식 유입·4방향 제안·HTML 블록만 Agent 분산.
+
+**트리거:** "터보로 제안" · "TURBO" · "UI 터보" 명시. 미명시 = 일반.
+
+**원칙 (4):**
+1. **병렬화만, 스킵 금지** — ②DS 추출 게이트·⑤SHE 필터·⑤-b UX_GATE·⑧ PRD 정합성 검증 불변
+2. **독립성 확인** — 4방향·Action·화면 블록은 토큰·SHE 결과 공유 후 독립
+3. **통합 시퀀셜** — HTML 최종 조립·PRD 정합성 매트릭스·화면 간 일관성은 메인
+4. **Agent 브리프 완결성** — 토큰 테이블·컴포넌트 인벤토리·Action/Task 분해·SHE 노출 등급·UX_GATE 통과 결과 전달
+
+**병렬 타겟:**
+- ⑥ 지식 유입: Action·Task별 사례 리서치 — Action당 Agent (Task-특정 사례만 차단 브리프)
+- ⑦ 제안 4방향(표준/iOS26/AOS/창의적) — 방향별 Agent (2가지는 정보계층·인터랙션 흐름 달라야)
+- ⑧ 화면별 HTML 블록 드래프트 — 화면별 Agent (토큰·SHE 결과 공유)
+
+**병렬 제외 (시퀀셜):**
+- ① 입력 파악 (피그마 MCP·PDF·스크린샷 재현도 판정)
+- ② DS 추출 + 토큰 게이트 (형 승인 필수)
+- ③ 분석 (PRD 3경로 A/B/C) · ④ 추출 (UI 구조·인터랙션 패턴)
+- ⑤ SHE 필터 + 게이트 (Before/After·타이밍 설계표·형 승인)
+- ⑤-b UX_GATE (15원리 중 12개+ PASS 필수)
+- ⑧ HTML 최종 통합·PRD 정합성 검증(§4 매트릭스)·design-skill CASCADE
+
+**품질 저하 방어:**
+- 범용 지식 혼입("모든 Task에 성립") 감지 → 해당 Agent 재발행
+- 4방향 중 2방향 이상 동일 구조(정보계층·흐름 동일) 감지 → 재드래프트
+- 토큰 범위 이탈·SHE 노출 등급 위반 감지 → 시퀀셜 재작성
+- N9 오류회복·D3 피드백 누락 감지 → UX_GATE 재검증
+
+**예상 단축:** 45~60% (화면 수·4방향 조합 규모에 비례)
+
+---
+
+## 예시
+
+발동 후 스킬 프로토콜에 따라 단계별 실행 → 산출물 생성.
+
+---
+
 ## Gotchas
 
 - **PDF 토큰 과신**: 색상값 렌더링 의존 → 게이트 검증 필수
@@ -172,3 +223,10 @@ HTML 파일. 화면별 4가지 제안 비교. **HTML 스타일은 html-div-style
 - **PRD 유형 오판**: 보조 유형은 Task 순서·SHE 보충만. 매핑룰 적용 ✗
 - **UX_GATE 스킵**: SHE만 통과시키고 UX 원리 미검증 → N9(오류회복)·D3(피드백) 누락 빈발. ⑤-b 필수
 - **허브 풀로드**: 15원리 매 턴 전체 로드 → 토큰 낭비. 검증 실패 항목만 해당 섹션(#A-N5 등) 재참조
+
+
+## 참조
+
+- `→ references/ios26-patterns.md`
+- `→ references/knowledge-injection.md`
+- `→ references/md3-patterns.md`
