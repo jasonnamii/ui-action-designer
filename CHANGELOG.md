@@ -1,4 +1,4 @@
-# ui-action-designer autoloop changelog
+# ui-designer autoloop changelog
 
 ## Exp 1 — keep
 점수: 4/5 (baseline 2/5)

@@ -1,6 +1,6 @@
 # UX Principles — 공통 허브
 
-5개 UX 스킬(ui-action-designer·app-architect·design-skill·copywriting-engine·html-div-style)이 참조하는 단일 허브. **풀텍스트는 여기에만**, 스포크는 `@ref: _shared/ux-principles.md#N` 포인터만 유지.
+5개 UX 스킬(ui-designer·app-architect·design-skill·copywriting-skill·html-div-style)이 참조하는 단일 허브. **풀텍스트는 여기에만**, 스포크는 `@ref: _shared/ux-principles.md#N` 포인터만 유지.
 
 ---
 
@@ -37,10 +37,10 @@
 
 | 스킬 | 적용 원리(코어) | 적용 시점 | 검사 도구 |
 |------|---------------|----------|----------|
-| ui-action-designer | N1~N10 전체 + D1~D5 | SHE 필터 직후 `UX_GATE` | 10+5 체크리스트 |
+| ui-designer | N1~N10 전체 + D1~D5 | SHE 필터 직후 `UX_GATE` | 10+5 체크리스트 |
 | app-architect | N2·N4·N6 + D1·D3 | 와이어프레임 산출 직전 | 5원칙 체크 |
 | design-skill | N4·N6·N8 (공리 X1·X2 매핑) | CORE 7 검증 시 병행 | CORE-UX 매핑표 |
-| copywriting-engine | N2·N5·N9·N10 | 카피 생산 후 QC | 4원칙 마이크로카피 체크 |
+| copywriting-skill | N2·N5·N9·N10 | 카피 생산 후 QC | 4원칙 마이크로카피 체크 |
 | html-div-style | N4·N6·N8 | 14규칙 검증 시 주석 | 3원칙 연결 주석 |
 
 ---
@@ -51,7 +51,7 @@
 
 | 충돌 유형 | 해소 |
 |----------|------|
-| ui-action-designer + design-skill 동시호출 | 허브 1회만 로드. 중복 해석 금지 |
+| ui-designer + design-skill 동시호출 | 허브 1회만 로드. 중복 해석 금지 |
 | UX 원리 ↔ 기존 스킬 프로토콜 | **기존 프로토콜 우선** + UX 원리를 보조 검증 레이어로만 |
 | UX 원리끼리 충돌 (예: N7 유연성 ↔ N8 미니멀) | 사용 맥락에서 승부 — 초보 UX=N8 우선, 전문가 UX=N7 우선 |
 | UP의 M7.SKILL_PRECEDENCE | UP SAFE_RULES 절대 우선. 허브는 하위 |
