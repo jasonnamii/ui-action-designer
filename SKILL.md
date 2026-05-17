@@ -25,11 +25,32 @@ description: |
 
 UI설계·UI제안·화면설계·UI패턴·터보UI 전용 엔진 — 피그마 디자인시스템에서 Action>Task 구조로 UI 제안을 생성.
 
+
+## Skill Boundaries
+
+- **하는 것** — UI Action Designer v1.1.
+- **안 하는 것** — 디자인시스템구축·애플디자인스타일(→apple-design-style)·프로토타입코딩.
+
 ①입력→②DS추출→[토큰게이트]→③분석(PRD 3경로)→④추출→⑤SHE→[SHE게이트]→⑤-b UX_GATE→⑥지식유입→⑦제안→⑧산출
 
 **UX 원리 허브:** `@ref: references/ux-principles.md` — Nielsen 10 + Norman 5 단일 출처. 이 스킬은 허브 §A+§B 전체 적용.
 
 ---
+
+## When to Use
+
+- 사용자가 "설계해줘", "제안해줘", "분석해줘", "PRD 만들어줘", "터보로 제안해줘" 같은 표현으로 발동
+- 도메인 작업이 필요한 시점
+- **안 쓸 때** — 디자인시스템구축·애플디자인스타일(→apple-design-style)·프로토타입코딩.
+
+
+## Prerequisites
+
+| # | 체크 | 미충족 시 |
+|---|------|-----------|
+| 1 | 대상·입력 명확 (스킬 발동 의도 확인) | 1줄 확인 후 진입 |
+| 2 | references/ 폴더 접근 가능 | inline fallback |
+
 
 ## 4블록 참조 구조
 
@@ -225,7 +246,38 @@ HTML 파일. 화면별 4가지 제안 비교. **HTML 스타일은 html-div-style
 산출물·대화 작업 라벨 ZERO. → `shaper-skill/references/no-work-label.md`
 
 
-## Gotchas
+## Output Path
+
+| 산출물 | 경로 |
+|---|---|
+| 주 산출물 | `mnt/outputs/ui-designer_{topic}_{YYYY-MM-DD}.md` |
+| 형식 | HTML로, 제안서로, 비교표로, PRD로. |
+| 리서치 결과 (해당 시) | `{VAULT}/_skills research/ui-designer/{YYYY-MM-DD}_{topic}.md` |
+
+## Reference Index
+
+| 파일 | 내용 | 언제 |
+|---|---|---|
+| `references/forbidden.md` | forbidden | 해당 단계 진입 시 |
+| `references/ios26-patterns.md` | ios26 patterns | 해당 단계 진입 시 |
+| `references/knowledge-injection.md` | knowledge injection | 해당 단계 진입 시 |
+| `references/md3-patterns.md` | md3 patterns | 해당 단계 진입 시 |
+| `references/prd-frames.md` | prd frames | 해당 단계 진입 시 |
+| `references/proposal-rules.md` | proposal rules | 해당 단계 진입 시 |
+| `references/qc.md` | qc | 해당 단계 진입 시 |
+| `references/she-protocol.md` | she protocol | 해당 단계 진입 시 |
+| `references/snippets.md` | snippets | 해당 단계 진입 시 |
+| `references/tokens.md` | tokens | 해당 단계 진입 시 |
+| `references/ux-principles.md` | ux principles | 해당 단계 진입 시 |
+
+
+## Next Phase
+
+본 스킬 작업 후 자연스럽게 이어지는 흐름:
+
+- 후속 작업 → `apple-design-style`
+
+## Failure Modes (Gotchas)
 
 | 함정 | 대응 |
 |------|------|
